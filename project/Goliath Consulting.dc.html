@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Work+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f6f3ec; color: #17150f; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #8a6a24; text-decoration: none; }
+  a:hover { color: #17150f; }
+  ::selection { background: #8a6a24; color: #f8f5ee; }
+  input, textarea, button { font: inherit; max-width: 100%; }
+  img { max-width: 100%; }
+  h1, h2, h3, h4 { overflow-wrap: break-word; }
+  @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</helmet>
+
+<div style="--gold: {{ gold }}; background: #f6f3ec; color: #17150f; font-family: 'Work Sans', system-ui, sans-serif; font-weight: 400; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding: 10px clamp(16px, 5vw, 56px); background: rgba(246,243,236,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(23,21,15,0.10)">
+    <a href="#top" style="display: flex; align-items: center; gap: 10px; color: #17150f; min-width: 0">
+      <img src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/22bef011-9d5d-48a3-97e0-0b03c42c0cb3/Goliath+Consulting+LLC+logo.png" alt="Goliath Consulting LLC logo with a black background and gold and silver letter G and C." style="height: 34px; width: auto; display: block" />
+      <span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(12.5px, 2.6vw, 15px); letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0">Goliath Consulting LLC</span>
+    </a>
+    <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px clamp(16px, 2.4vw, 34px); margin-left: auto">
+      <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">Home</a>
+      <a href="#about" style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">About</a>
+      <a href="#services" style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">Services</a>
+      <a href="#contact" style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; flex: none; border: 1px solid var(--gold, #8a6a24); border-radius: 999px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold, #8a6a24)" style-hover="background: var(--gold, #8a6a24); color: #f8f5ee">Contact</a>
+    </nav>
+  </header>
+
+  <section id="top" style="scroll-margin-top: 100px; padding: clamp(56px, 9vw, 120px) clamp(20px, 5vw, 56px) clamp(48px, 7vw, 96px)">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; gap: clamp(32px, 4.5vw, 56px)">
+      <div style="display: flex; align-items: center; gap: 14px; animation: rise 0.9s both">
+        <span style="width: 40px; height: 1px; background: var(--gold, #8a6a24)"></span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #8a6a24)">Operations · Supply Chain · Leadership</span>
+      </div>
+      <h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(48px, 9.6vw, 138px); line-height: 0.94; letter-spacing: -0.025em; max-width: 15ch; color: #17150f; animation: rise 1s 0.06s both">Where Strategy Meets Execution</h1>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(24px, 4vw, 56px); align-items: end; animation: rise 1s 0.14s both">
+        <p style="margin: 0; font-size: clamp(16px, 1.5vw, 19.5px); line-height: 1.65; color: #4a463d; max-width: 62ch; text-wrap: pretty">Strategy is only the beginning. We partner with organizations to strengthen operations, optimize supply chains, empower leaders, and turn ideas into measurable results. Let us help you realize the full potential of your organization. Contact us today for a consultation.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a href="#contact" style="display: inline-flex; align-items: center; justify-content: center; flex: 1 1 240px; height: 54px; padding: 0 28px; border-radius: 999px; background: var(--gold, #8a6a24); color: #f8f5ee; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase" style-hover="background: #17150f; color: #f8f5ee">Request a consultation</a>
+          <a href="#services" style="display: inline-flex; align-items: center; justify-content: center; flex: 1 1 240px; height: 54px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(23,21,15,0.28); color: #17150f; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase" style-hover="border-color: #17150f; background: #efeae0">See the offerings</a>
+        </div>
+      </div>
+      <figure style="margin: 0; display: grid; gap: 12px; animation: fade 1.2s 0.2s both">
+        <img src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/1783968060701-O3RNF2UU3UQR8FLA8JIP/unsplash-image-5U_28ojjgms.jpg" alt="Group of people sitting around a wooden table in a modern, cozy cafe or restaurant, engaged in conversation and enjoying drinks and food." style="width: 100%; height: clamp(280px, 46vh, 520px); object-fit: cover; border-radius: 4px; filter: saturate(0.82)" />
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid rgba(23,21,15,0.10); border-bottom: 1px solid rgba(23,21,15,0.10); padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 56px)">
+    <div data-reveal="1" style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: baseline; gap: clamp(16px, 4vw, 48px)">
+      <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(34px, 5.6vw, 78px); line-height: 1; letter-spacing: -0.03em">People.<span style="color: var(--gold, #8a6a24)"> Process.</span> Performance.</h2>
+      <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #635d52">Goliath Consulting LLC</p>
+    </div>
+  </section>
+
+  <section id="about" style="scroll-margin-top: 100px; padding: clamp(72px, 10vw, 160px) clamp(20px, 5vw, 56px) 0">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; gap: clamp(40px, 6vw, 88px)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #8a6a24)">Introduction</span>
+        <span style="flex: 1; height: 1px; background: rgba(23,21,15,0.14)"></span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 5vw, 72px); align-items: stretch">
+        <div data-reveal="1" style="display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 14px">
+          <img src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/45f2ab60-a779-4829-b64c-db7636c4434b/84486BC2-C787-4F7F-B717-CF0DFC518902_1_105_c.jpeg" alt="A man with a beard and sunglasses leaning on a stone railing by a body of water with boats in the background." style="width: 100%; height: 100%; min-height: 420px; object-fit: cover; border-radius: 4px; filter: saturate(0.7)" />
+          <sc-if value="{{ showResumeLinks }}" hint-placeholder-val="{{ true }}">
+            <a href="https://goliathconsultingllc.com/s/Anil-Charles-Curry-Resume.pdf" style="display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 22px; border: 1px solid rgba(23,21,15,0.20); border-radius: 999px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4a463d" style-hover="border-color: var(--gold, #8a6a24); color: var(--gold, #8a6a24)">Founder’s Resume</a>
+          </sc-if>
+        </div>
+
+        <div data-reveal="1" style="display: grid; gap: clamp(40px, 5vw, 64px)">
+          <div style="display: grid; gap: 18px">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -0.03em">My Story</h3>
+            <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 66ch; text-wrap: pretty">After more than 20 years leading operations across Fortune 500 companies, third-party logistics providers, and family-owned businesses, I learned one simple truth: change isn't difficult because organizations lack ideas—it fails because of execution. Too often, consulting engagements end with a polished presentation, a strategic roadmap, and a final invoice—but little support for the difficult work of implementation. Having experienced this as a Manager, Director, and Vice President, I saw a niche in the market to create real change. I formed Goliath Consulting LLC, a unique service provider breaking the industry model.</p>
+          </div>
+          <div style="display: grid; gap: 18px; padding: clamp(24px, 3vw, 36px); background: #efeae0; border: 1px solid rgba(23,21,15,0.10); border-radius: 6px">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.05; letter-spacing: -0.03em; color: var(--gold, #8a6a24)">Our Goal</h3>
+            <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 66ch; text-wrap: pretty">At Goliath Consulting, the mission is to help organizations turn strategy into sustainable results by partnering with organizational leaders to develop practical solutions, strengthen operations, and empower people to embrace lasting change. I believe meaningful transformation happens through collaboration, accountability, and execution—not just recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: clamp(72px, 10vw, 160px) clamp(20px, 5vw, 56px)">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; gap: clamp(36px, 5vw, 64px)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #8a6a24)">The Team</span>
+        <span style="flex: 1; height: 1px; background: rgba(23,21,15,0.14)"></span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start">
+        <div data-reveal="1" style="display: grid; gap: clamp(24px, 3vw, 36px); align-content: start">
+          <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(32px, 4.4vw, 60px); line-height: 1; letter-spacing: -0.035em">A Network of Professionals</h3>
+          <div style="display: grid; gap: 1px; background: rgba(23,21,15,0.12); border: 1px solid rgba(23,21,15,0.12); border-radius: 6px; overflow: hidden">
+            <sc-for list="{{ disciplines }}" as="d" hint-placeholder-count="7">
+              <div style="background: #f8f5ee; padding: 16px 20px; display: flex; align-items: center; gap: 12px">
+                <span style="flex: none; width: 5px; height: 5px; border-radius: 999px; background: var(--gold, #8a6a24)"></span>
+                <span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 16.5px; line-height: 1.3; letter-spacing: -0.01em; color: #17150f">{{ d.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div data-reveal="1" style="display: grid; gap: 22px; align-content: start">
+          <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 66ch; text-wrap: pretty">Goliath Consulting is supported by a trusted network of seasoned subject matter experts who share our commitment to collaboration, practical solutions, and lasting organizational improvement.</p>
+          <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 66ch; text-wrap: pretty">Our collective experience spans every stage of the operation including; supplier relations, production planning, shop floor operations, inventory management, finance, systems implementation, and organizational transformation. This breadth of expertise allows us to assemble the right team for each engagement, ensuring you receive specialized knowledge tailored to your unique business challenges.</p>
+          <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 66ch; text-wrap: pretty">Whether your organization requires targeted support in a specific functional area or a cross-functional team to guide enterprise-wide change, Goliath Consulting brings together the experience and expertise needed to deliver meaningful, sustainable results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="scroll-margin-top: 100px; border-top: 1px solid rgba(23,21,15,0.10); background: #ece7dc; padding: clamp(72px, 10vw, 150px) clamp(20px, 5vw, 56px)">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; gap: clamp(44px, 6vw, 84px)">
+      <div style="display: grid; gap: clamp(20px, 3vw, 32px)">
+        <div style="display: flex; align-items: center; gap: 14px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #8a6a24)">Advisory Services</span>
+          <span style="flex: 1; height: 1px; background: rgba(23,21,15,0.14)"></span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(34px, 5.4vw, 76px); line-height: 0.98; letter-spacing: -0.035em; max-width: 18ch">Offerings</h2>
+        <p style="margin: 0; font-size: clamp(17px, 1.7vw, 22px); line-height: 1.55; color: #4a463d; max-width: 48ch; text-wrap: pretty">Explore our range of services designed to help you move forward with confidence.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(40px, 5vw, 64px)">
+        <div style="display: flex; flex-wrap: wrap; gap: 1px; background: rgba(23,21,15,0.12); border-top: 1px solid rgba(23,21,15,0.12); border-bottom: 1px solid rgba(23,21,15,0.12)">
+          <sc-for list="{{ serviceIndex }}" as="s" hint-placeholder-count="5">
+            <a href="{{ s.href }}" style="flex: 1 1 200px; min-width: 0; background: #ece7dc; padding: 24px 18px; display: flex; align-items: center; color: #4a463d" style-hover="background: #f8f5ee; color: #17150f">
+              <span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 16px; line-height: 1.22; letter-spacing: -0.01em">{{ s.label }}</span>
+            </a>
+          </sc-for>
+        </div>
+
+        <article id="supply-chain" style="scroll-margin-top: 110px; display: grid; gap: clamp(28px, 3.5vw, 44px); padding-top: clamp(20px, 3vw, 40px)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px, 4vw, 56px); align-items: stretch">
+            <div style="display: grid; gap: 16px">
+              <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.03em">Supply Chain Logistics</h3>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">An efficient supply chain is more than a competitive advantage — it’s the foundation of a resilient business. At Goliath, we partner with organizations to optimize at every stage of the chain.</p>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Either bring us your current supply chain concern or let us review the total process. We can provide analysis and solutions on multiple levels. Below are a few of our key points:</p>
+            </div>
+            <img data-reveal="1" src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/1784067649484-ZICM8R4SPJZ4B4HL0N1T/unsplash-image-fT4SwA83jH4.jpg" alt="A shipping yard filled with stacked colorful cargo containers under a pink and purple sunset sky, with large cranes and a truck nearby." style="width: 100%; height: 100%; min-height: 260px; align-self: stretch; object-fit: cover; border-radius: 4px; filter: saturate(0.75)" />
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1px; background: rgba(23,21,15,0.12); border: 1px solid rgba(23,21,15,0.12); border-radius: 6px; overflow: hidden">
+            <div style="flex: 1 1 260px; min-width: 0; background: #f8f5ee; padding: 26px 24px; display: grid; gap: 14px; align-content: start">
+              <h4 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--gold, #8a6a24)">Suppliers:</h4>
+              <ul style="margin: 0; padding-left: 18px; display: grid; gap: 10px; font-size: 16px; line-height: 1.55; color: #4a463d">
+                <li>What resiliency do your suppliers have?</li>
+                <li>What backup models are available in case of disruption?</li>
+              </ul>
+            </div>
+            <div style="flex: 1 1 260px; min-width: 0; background: #f8f5ee; padding: 26px 24px; display: grid; gap: 14px; align-content: start">
+              <h4 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--gold, #8a6a24)">Warehousing/Inventory Control:</h4>
+              <ul style="margin: 0; padding-left: 18px; display: grid; gap: 10px; font-size: 16px; line-height: 1.55; color: #4a463d">
+                <li>Is your product flow optimal?</li>
+                <li>Does your footprint match your needs?</li>
+                <li>Do you have the right tools to move product through the operation?</li>
+                <li>Does the inventory days of supply match your current volume?</li>
+                <li>What stratification of items are placed to match velocity?</li>
+              </ul>
+            </div>
+            <div style="flex: 1 1 260px; min-width: 0; background: #f8f5ee; padding: 26px 24px; display: grid; gap: 14px; align-content: start">
+              <h4 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--gold, #8a6a24)">Transportation:</h4>
+              <ul style="margin: 0; padding-left: 18px; display: grid; gap: 10px; font-size: 16px; line-height: 1.55; color: #4a463d">
+                <li>What modes are most efficient for your business?</li>
+                <li>Do you have visibility of goods from supplier to end customer?</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article id="operational-efficiency" style="scroll-margin-top: 110px; display: grid; gap: clamp(28px, 3.5vw, 44px); border-top: 1px solid rgba(23,21,15,0.12); padding-top: clamp(40px, 5vw, 72px)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px, 4vw, 56px); align-items: stretch">
+            <div style="display: grid; gap: 16px">
+              <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.03em">Operational Efficiency</h3>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Every organization has opportunity to improve —but lasting operational excellent isn’t achieved through quick fixes or across-the-board cost reductions. It’s built by understanding how people, processes and technology work together to create value.</p>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">We know that one of your greatest resources is the people who know your operation best. Rather than focusing on headcount reduction we partner with your front line teams to understand their workflow. Some of the most cost effective solutions come from those that live your operation daily.</p>
+            </div>
+            <img data-reveal="1" src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/1784124795467-BWWCTZRH8I7TM2UATNM8/unsplash-image-5hPe-Tr2wog.jpg" alt="Close-up of industrial machinery with interconnected black cables and yellow safety rails inside a factory setting." style="width: 100%; height: 100%; min-height: 260px; align-self: stretch; object-fit: cover; border-radius: 4px; filter: saturate(0.75)" />
+          </div>
+          <div style="display: grid; gap: clamp(18px, 2.4vw, 26px)">
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold, #8a6a24)">Part of our process:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1px; background: rgba(23,21,15,0.12); border: 1px solid rgba(23,21,15,0.12); border-radius: 6px; overflow: hidden">
+              <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">Interview floor operations and critical office staff.</span>
+              </div>
+              <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">Generate reporting, analytics based on the team’s feedback.</span>
+              </div>
+              <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">Evaluate the most cost efficient projects with ROI</span>
+              </div>
+              <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">Work with senior leadership and production floor management to implement.</span>
+              </div>
+              <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">Lasting support from implementation to completion so that you see the results.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="customer-intelligence" style="scroll-margin-top: 110px; display: grid; gap: clamp(28px, 3.5vw, 44px); border-top: 1px solid rgba(23,21,15,0.12); padding-top: clamp(40px, 5vw, 72px)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px, 4vw, 56px); align-items: stretch">
+            <div style="display: grid; gap: 16px">
+              <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.03em">Customer Intelligence &amp; Engagement</h3>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Your customers critical resources for business insight. Understanding what they think, expect and experience is essential to building stronger relationships, improving products and services, and maintaining a competitive advantage.</p>
+            </div>
+            <img data-reveal="1" src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/1784140144630-2AX5NAKU12NP7N215IGO/unsplash-image-kN_kViDchA0.jpg" alt="An open-plan modern office with multiple workstations, people working at their desks with computers, large windows allowing natural light, white ceiling tiles with fluorescent lights, and a bookshelf divider in the background." style="width: 100%; height: 100%; min-height: 260px; align-self: stretch; object-fit: cover; border-radius: 4px; filter: saturate(0.75)" />
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 3vw, 48px)">
+            <p style="margin: 0; flex: 1 1 280px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">At Goliath, we help organizations transform customer feedback into meaningful business intelligence. By leveraging advanced analytic and AI-powered tools, we gather and interpret insights from customer surveys, online reviews, social media, industry forums, and other other digital channels. This helps identify emerging trends, opportunities, and potential risks.</p>
+            <p style="margin: 0; flex: 1 1 280px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">Data along doesn’t drive better decision; actionable insights do. We work with your team to develop reporting that delivers clear, relevant information to every level of the organization. This ensures leaders have the visibility they need to respond quickly, improve the customer experience, and make informed strategic decision.</p>
+            <p style="margin: 0; flex: 1 1 280px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">When your organization understands the voice of the customer, every decision becomes more intentional, responsive, and aligned with long-term success.</p>
+          </div>
+        </article>
+
+        <article id="executive-partnership" style="scroll-margin-top: 110px; display: grid; gap: clamp(28px, 3.5vw, 44px); border-top: 1px solid rgba(23,21,15,0.12); padding-top: clamp(40px, 5vw, 72px)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px, 4vw, 56px); align-items: end">
+            <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.03em">Executive Partnership &amp; Change Leadership</h3>
+            <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Successful transformation requires more than great ideas—it requires committed leadership. Lasting change happens when executives provide clear direction, remove barriers, and remain actively engaged throughout the implementation process.</p>
+          </div>
+          <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: clamp(24px, 3vw, 48px)">
+            <p style="margin: 0; flex: 1 1 340px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">Having served in leadership roles from Manager to Vice President, we understand the competing priorities executives face every day. That's why Goliath Consulting operates as an extension of your leadership team, providing the transparency and accountability needed to keep initiatives moving forward without creating unnecessary administrative burden.</p>
+            <p style="margin: 0; flex: 1 1 340px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">We establish clear performance metrics, monitor progress, and deliver concise executive updates that highlight accomplishments, risks, and next steps. Rather than lengthy status meetings, our focus is on providing timely, actionable information that enables leaders to make informed decisions quickly and confidently.</p>
+            <p style="margin: 0; flex: 1 1 340px; min-width: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; text-wrap: pretty">By aligning executive leadership with frontline teams, we help ensure that strategic initiatives don't lose momentum after the planning phase, they become lasting improvements embedded throughout the organization.</p>
+          </div>
+        </article>
+
+        <article id="business-resilience" style="scroll-margin-top: 110px; display: grid; gap: clamp(28px, 3.5vw, 44px); border-top: 1px solid rgba(23,21,15,0.12); padding-top: clamp(40px, 5vw, 72px)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px, 4vw, 56px); align-items: stretch">
+            <div style="display: grid; gap: 16px">
+              <h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(28px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.03em">Business Resilience and Risk Management</h3>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Every business faces operational and supply chain risks, but organizations that proactively identify and manage those risks are better positioned to maintain performance, protect profitability, and respond confidently to change. We partner with you to evaluate vulnerabilities across your supply chain, operations, inventory, supplier network, and business processes, transforming potential risks into actionable improvement opportunities.</p>
+              <p style="margin: 0; font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.7; color: #4a463d; max-width: 60ch; text-wrap: pretty">Our approach goes beyond identifying issues; we provide practical, data driven solutions that strengthen resilience while supporting your operational goals. By developing customized risk mitigation strategies and implementation plans, we help reduce disruptions, improve decision-making, and create a more agile organization prepared for future challenges.</p>
+            </div>
+            <img data-reveal="1" src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/1784655767137-8DCQGTV8EPTLICYORWSV/unsplash-image-abh7zBccJS8.jpg" alt="A person is placing a white sign on a glass door that reads &quot;OPEN&quot; with a gold oval around it. Additional text on the sign says &quot;BUSINESS AS&quot; and &quot;NEW NORMAL.&quot;" style="width: 100%; height: 100%; min-height: 260px; align-self: stretch; object-fit: cover; border-radius: 4px; filter: saturate(0.75)" />
+          </div>
+          <div style="display: grid; gap: clamp(20px, 3vw, 28px)">
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold, #8a6a24)"><strong style="font-weight: 500">Deliverables Include:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1px; background: rgba(23,21,15,0.12); border: 1px solid rgba(23,21,15,0.12); border-radius: 6px; overflow: hidden">
+              <sc-for list="{{ deliverables }}" as="d" hint-placeholder-count="8">
+                <div style="flex: 1 1 300px; min-width: 0; background: #f8f5ee; padding: 22px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start">
+                  <span style="width: 14px; height: 1px; background: var(--gold, #8a6a24); margin-top: 11px"></span>
+                  <span style="font-size: 16px; line-height: 1.5; color: #4a463d; text-wrap: pretty">{{ d.label }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="scroll-margin-top: 100px; padding: clamp(72px, 10vw, 150px) clamp(20px, 5vw, 56px)">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; gap: clamp(40px, 5vw, 72px)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #8a6a24)">Contact</span>
+        <span style="flex: 1; height: 1px; background: rgba(23,21,15,0.14)"></span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start">
+        <div style="display: grid; gap: 24px">
+          <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(34px, 5vw, 68px); line-height: 0.98; letter-spacing: -0.035em">Submit an Inquiry</h2>
+          <p style="margin: 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.65; color: #4a463d; max-width: 52ch; text-wrap: pretty">Please complete the brief form below to initiate a conversation with our consulting team and determine how our expertise can facilitate your organizational objectives.</p>
+          <div style="display: grid; gap: 6px; padding-top: 8px">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #635d52">Or email directly</span>
+            <a href="mailto:aac@goliathconsultingllc.com" style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(18px, 2.2vw, 28px); letter-spacing: -0.02em; word-break: break-word">acc@goliathconsultingllc.com</a>
+          </div>
+        </div>
+
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ onSubmit }}" style="display: grid; gap: 18px; padding: clamp(24px, 3vw, 40px); background: #f8f5ee; border: 1px solid rgba(23,21,15,0.12); border-radius: 6px">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px">
+              <label style="display: grid; gap: 8px">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #635d52">Name</span>
+                <input type="text" name="name" required="" style="height: 46px; padding: 0 14px; background: #fbf9f4; border: 1px solid rgba(23,21,15,0.18); border-radius: 4px; color: #17150f; font-size: 16px" style-focus="border-color: var(--gold, #8a6a24); outline: none" />
+              </label>
+              <label style="display: grid; gap: 8px">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #635d52">Organization</span>
+                <input type="text" name="org" style="height: 46px; padding: 0 14px; background: #fbf9f4; border: 1px solid rgba(23,21,15,0.18); border-radius: 4px; color: #17150f; font-size: 16px" style-focus="border-color: var(--gold, #8a6a24); outline: none" />
+              </label>
+            </div>
+            <label style="display: grid; gap: 8px">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #635d52">Email</span>
+              <input type="email" name="email" required="" style="height: 46px; padding: 0 14px; background: #fbf9f4; border: 1px solid rgba(23,21,15,0.18); border-radius: 4px; color: #17150f; font-size: 16px" style-focus="border-color: var(--gold, #8a6a24); outline: none" />
+            </label>
+            <label style="display: grid; gap: 8px">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #635d52">What are you working through?</span>
+              <textarea name="message" rows="5" style="padding: 12px 14px; background: #fbf9f4; border: 1px solid rgba(23,21,15,0.18); border-radius: 4px; color: #17150f; font-size: 16px; line-height: 1.55; resize: vertical" style-focus="border-color: var(--gold, #8a6a24); outline: none"></textarea>
+            </label>
+            <button type="submit" style="height: 52px; margin-top: 4px; border: none; border-radius: 999px; background: var(--gold, #8a6a24); color: #f8f5ee; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer" style-hover="background: #17150f">{{ submitLabel }}</button>
+            <p style="margin: 0; font-size: 13.5px; line-height: 1.5; color: #635d52; min-height: 20px">{{ formNote }}</p>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(23,21,15,0.10); padding: clamp(40px, 5vw, 64px) clamp(20px, 5vw, 56px)">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <img src="https://images.squarespace-cdn.com/content/v1/6a4588b7a805f6688af51b95/22bef011-9d5d-48a3-97e0-0b03c42c0cb3/Goliath+Consulting+LLC+logo.png" alt="Goliath Consulting LLC logo with a black background and gold and silver letter G and C." style="height: 40px; width: auto; display: block" />
+        <div style="display: grid; gap: 4px">
+          <span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em">Goliath Consulting LLC</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #635d52">People. Process. Performance.</span>
+        </div>
+      </div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 4px 24px">
+        <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">Home</a>
+        <a href="#about" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">About</a>
+        <a href="#services" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">Services</a>
+        <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6559; display: inline-flex; align-items: center; min-height: 44px" style-hover="color: #17150f">Contact</a>
+      </nav>
+      <a href="mailto:aac@goliathconsultingllc.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.04em">acc@goliathconsultingllc.com</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#8a6a24&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#8a6a24&quot;,&quot;#1f3d34&quot;,&quot;#7a2f22&quot;,&quot;#3b3f6b&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;showResumeLinks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showForm&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, narrow: false };
+
+  _watchWidth() {
+    if (!window.matchMedia) return;
+    this._mq = window.matchMedia('(max-width: 700px)');
+    const sync = () => this.setState({ narrow: this._mq.matches });
+    sync();
+    this._mq.addEventListener('change', sync);
+    this._syncWidth = sync;
+  }
+
+  componentDidMount() {
+    if (!('IntersectionObserver' in window)) return;
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.setAttribute('data-revealed', '1');
+        e.target.style.animation = 'rise 0.85s cubic-bezier(0.22,0.7,0.25,1) both';
+        this._io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    this._attach();
+    this._tick = setInterval(() => this._attach(), 400);
+    this._watchWidth();
+  }
+
+  componentDidUpdate() { this._attach(); }
+
+  _attach() {
+    if (!this._io) return;
+    document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((el) => this._io.observe(el));
+  }
+
+  componentWillUnmount() {
+    if (this._tick) clearInterval(this._tick);
+    if (this._mq && this._syncWidth) this._mq.removeEventListener('change', this._syncWidth);
+    if (this._io) this._io.disconnect();
+  }
+
+  renderVals() {
+    const disciplines = [
+      "Supplier relations", "Production planning", "Shop floor operations",
+      "Inventory management", "Finance", "Systems implementation",
+      "Organizational transformation"
+    ].map((label, i) => ({ label, n: String(i + 1).padStart(2, "0") }));
+
+    const serviceIndex = [
+      ["Supply Chain Logistics", "#supply-chain"],
+      ["Operational Efficiency", "#operational-efficiency"],
+      ["Customer Intelligence & Engagement", "#customer-intelligence"],
+      ["Executive Partnership & Change Leadership", "#executive-partnership"],
+      ["Business Resilience and Risk Management", "#business-resilience"]
+    ].map(([label, href], i) => ({ label, href, n: String(i + 1).padStart(2, "0") }));
+
+    const deliverables = [
+      "Comprehensive operational and supply chain risk assessment",
+      "Risk heat map with prioritized areas of concern",
+      "Supplier risk evaluation and mitigation recommendations",
+      "Business continuity and contingency planning",
+      "Process vulnerability analysis with improvement recommendations",
+      "Inventory and capacity risk assessment",
+      "Actionable risk mitigation roadmap with implementation priorities",
+      "Executive summary and presentation of findings with strategic recommendations"
+    ].map((label, i) => ({ label, n: String(i + 1).padStart(2, "0") }));
+
+    return {
+      gold: this.props.accent ?? "#8a6a24",
+      showResumeLinks: this.props.showResumeLinks ?? true,
+      showForm: this.props.showForm ?? true,
+      disciplines, serviceIndex, deliverables,
+      submitLabel: this.state.sent ? "Inquiry received" : "Submit inquiry",
+      formNote: this.state.sent
+        ? "Thank you — we will be in touch shortly."
+        : "We typically respond within one business day.",
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
