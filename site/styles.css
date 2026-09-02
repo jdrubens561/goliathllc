@@ -664,3 +664,21 @@ h1, h2, h3, h4 { overflow-wrap: break-word; }
   .hero-figure,
   [data-reveal] { animation: none !important; }
 }
+
+/* Narrow viewports ------------------------------------------------------ */
+/* Below ~760px every grid above is single-column, so images no longer have
+   a neighbouring text column to match. The stretch pattern that does that
+   (height:100% on a stretched grid item, plus a forced min-height) can
+   overflow its row on mobile Safari and spill over the content beneath, so
+   swap it for a plain aspect ratio here. */
+
+@media (max-width: 760px) {
+  .about-photo,
+  .offering-img {
+    height: auto;
+    min-height: 0;
+    align-self: auto;
+    aspect-ratio: 16 / 10;
+  }
+  .about-photo { aspect-ratio: 3 / 4; }
+}
